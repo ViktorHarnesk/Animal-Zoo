@@ -33,32 +33,44 @@ abstract class Animals{
 }
 
 abstract class Insects : Animals {
-  bool hasWings;
+  public bool hasWings;
 }
 
 class Moth : Insects {
-  public Moth(string n, int a, bool hW){}
+  public Moth(string n, int a, bool hW){
+    name = n;
+    age = a;
+    hasWings = hW;
+  }
   public override void Greeting(){
     Console.WriteLine($"Wow, it's a Moth, it's named {name} and is {age} years old.");
   }
 }
 
 class Ant : Insects {
-  public Ant(string n, int a, bool hW){}
+  public Ant(string n, int a, bool hW){
+    name = n;
+    age = a;
+    hasWings = hW;
+  }
   public override void Greeting(){
     Console.WriteLine($"Wow, it's a Beetle, it's named {name} and is {age} years old.");
   }
 }
 
 abstract class Birds : Animals {
-    bool canFly;
+    public bool canFly;
     void Fly(int meters){
 
     }
 }
 
 class Raven : Birds {
-  public Raven(string n, int a, bool cF){}
+  public Raven(string n, int a, bool cF){
+    name = n;
+    age = a;
+    canFly = cF;
+  }
 public override void Greeting(){
     Console.WriteLine($"Wow, it's a Raven, it's named {name} and is {age} years old.");
   }
@@ -68,7 +80,11 @@ public override void Greeting(){
 }
 
 class Parrot : Birds {
-  public Parrot(string n, int a, bool cF){}
+  public Parrot(string n, int a, bool cF){
+    name = n;
+    age = a;
+    canFly = cF;
+  }
   public void Speak(string spoken){
     Console.WriteLine("The parrot responds: "+spoken);
   }
@@ -81,7 +97,11 @@ class Parrot : Birds {
 }
 
 class Penguin : Birds {
-  public Penguin(string n, int a, bool cF){}
+  public Penguin(string n, int a, bool cF){
+    name = n;
+    age = a;
+    canFly = cF;
+  }
   public override void Greeting(){
     Console.WriteLine($"Wow, it's a Penguin, it's named {name} and is {age} years old.");
   }
