@@ -15,6 +15,7 @@ class Zoo{
     }
   }
   public void addAnimal(Animals temp){
+    temp.Greeting();
     Animal.Add(temp);
   }
   public void removeAnimal(int i){
