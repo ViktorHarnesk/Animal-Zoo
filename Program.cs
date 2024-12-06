@@ -148,7 +148,8 @@ class Program {
         int age = Int32.Parse(Console.ReadLine());
         switch(type){
           case "Cat":
-          Cat c = new Cat(name, age, true);
+         // Cat c = new Cat(name, age, true);
+         Cat c = new Cat("pelle",22,true);
           jail.addAnimal(c);
           break;
           case "Parrot":
