@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 using System.Transactions;
 
 class Zoo{
-  List<Animals> Animal;
+  public List<Animals> Animal;
   public Zoo(){
    List<Animals> Animal = new(); 
   }
