@@ -121,6 +121,7 @@ public class Cat : Mammal {
     name = n;
     age = a;
     isNocturnal = iN;
+    Console.Write("!!!!");
   }
   public override bool isAsleep(){
     return true;
