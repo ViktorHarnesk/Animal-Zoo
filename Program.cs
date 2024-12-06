@@ -27,17 +27,17 @@ class Zoo{
 }
 
 
-abstract class Animals{
+public abstract class Animals{
   public string name ="";
   public int age;
   public abstract void Greeting();
 }
 
-abstract class Insects : Animals {
+public abstract class Insects : Animals {
   public bool hasWings;
 }
 
-class Moth : Insects {
+public class Moth : Insects {
   public Moth(string n, int a, bool hW){
     name = n;
     age = a;
@@ -48,7 +48,7 @@ class Moth : Insects {
   }
 }
 
-class Ant : Insects {
+public class Ant : Insects {
   public Ant(string n, int a, bool hW){
     name = n;
     age = a;
@@ -59,14 +59,14 @@ class Ant : Insects {
   }
 }
 
-abstract class Birds : Animals {
+public abstract class Birds : Animals {
     public bool canFly;
     void Fly(int meters){
 
     }
 }
 
-class Raven : Birds {
+public class Raven : Birds {
   public Raven(string n, int a, bool cF){
     name = n;
     age = a;
@@ -80,7 +80,7 @@ public override void Greeting(){
   }
 }
 
-class Parrot : Birds {
+public class Parrot : Birds {
   public Parrot(string n, int a, bool cF){
     name = n;
     age = a;
@@ -97,7 +97,7 @@ class Parrot : Birds {
   }
 }
 
-class Penguin : Birds {
+public class Penguin : Birds {
   public Penguin(string n, int a, bool cF){
     name = n;
     age = a;
@@ -111,12 +111,12 @@ class Penguin : Birds {
   }
 }
 
-abstract class Mammal : Animals {
+public abstract class Mammal : Animals {
   public bool isNocturnal;
   public abstract bool isAsleep();
 }
 
-class Cat : Mammal {
+public class Cat : Mammal {
   public Cat(string n, int a, bool iN){
     name = n;
     age = a;
