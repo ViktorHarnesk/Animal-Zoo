@@ -34,11 +34,6 @@ public abstract class Animals{
 }
 
 public abstract class Insects : Animals {
-   public Insects(string n, int a, bool hW){
-    name = n;
-    age = a;
-    hasWings = hW;
-  }
   public bool hasWings;
 }
 
@@ -65,10 +60,6 @@ public class Ant : Insects {
 }
 
 public abstract class Birds : Animals {
-  public Birds(string n, int a, bool cF){
-    name = n;
-    age = a;
-    canFly = cF;
     public bool canFly;
     void Fly(int meters){
 
@@ -121,21 +112,15 @@ public class Penguin : Birds {
 }
 
 public abstract class Mammal : Animals {
-  public Mammal(string n, int a, bool iN){
-  name = n;
-  age = a;
-  isNocturnal = iN;
-  Console.Write("!!!!");
-  }
   public bool isNocturnal;
   public abstract bool isAsleep();
 }
 
 public class Cat : Mammal {
   public Cat(string n, int a, bool iN){
-    name = n;
-    age = a;
-    isNocturnal = iN;
+    name = "s";
+    age = 1;
+    isNocturnal = true;
     Console.Write("!!!!");
   }
   public override bool isAsleep(){
