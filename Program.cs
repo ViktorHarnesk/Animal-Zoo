@@ -7,7 +7,7 @@ using System.Transactions;
 class Zoo{
   List<Animals> Animal;
   public Zoo(){
-   List<Animals> Animal = new List<Animals>(); 
+   List<Animals> Animal = new(); 
   }
   public void greetAnimals(){
     foreach(Animals a in Animal){
@@ -76,7 +76,7 @@ public override void Greeting(){
     Console.WriteLine($"Wow, it's a Raven, it's named {name} and is {age} years old.");
   }
   public void Fly(int distance){
-    Console.WriteLine("The bird flew "+distance+" meters.");
+    Console.WriteLine($"The bird flew {distance} meters.");
   }
 }
 
@@ -118,10 +118,9 @@ public abstract class Mammal : Animals {
 
 public class Cat : Mammal {
   public Cat(string n, int a, bool iN){
-    name = "s";
-    age = 1;
-    isNocturnal = true;
-    Console.Write("!!!!");
+    name = n;
+    age = a;
+    isNocturnal = iN;
   }
   public override bool isAsleep(){
     return true;
@@ -134,8 +133,8 @@ public class Cat : Mammal {
 class Program {
   public static void Main(){
     bool active = true;
-    Zoo jail = new Zoo();
-     Cat k = new Cat("pelle",22,true);
+    Zoo jail = new();
+     Cat k = new("pelle",22,true);
          k.Greeting();
     while(active){
       switch(Console.ReadKey().KeyChar){
@@ -151,28 +150,28 @@ class Program {
         int age = Int32.Parse(Console.ReadLine());
         switch(type){
           case "Cat":
-          Cat c = new Cat(name, age, true);
+          Cat c = new(name, age, true);
         
           jail.addAnimal(c);
           break;
           case "Parrot":
-          Parrot p = new Parrot(name, age, true);
+          Parrot p = new(name, age, true);
           jail.addAnimal(p);
           break;
           case "Penguin":
-          Penguin P = new Penguin(name, age, false);
+          Penguin P = new(name, age, false);
           jail.addAnimal(P);
           break;
           case "Ant":
-          Ant a = new Ant(name, age, false);
+          Ant a = new(name, age, false);
           jail.addAnimal(a);
           break;
           case "Moth":
-          Moth m = new Moth(name, age, true);
+          Moth m = new(name, age, true);
           jail.addAnimal(m);
           break;
           case "Raven":
-          Raven r = new Raven(name, age, true);
+          Raven r = new(name, age, true);
           jail.addAnimal(r);
           break;
         }
